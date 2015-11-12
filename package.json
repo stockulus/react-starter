@@ -44,5 +44,10 @@
     "react-addons-test-utils": "0.14.2",
     "react-dom": "0.14.2",
     "redux": "3.0.4"
+  },
+  "repository" :
+  {
+     "type": "git",
+     "url": "https://github.com/stockulus/react_starter"
   }
 }
