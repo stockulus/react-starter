@@ -9,6 +9,7 @@ export default createClass({
   propTypes: {
     store: PropTypes.object.isRequired
   },
+  displayName: 'App',
 
   _handleIncrementClick () {
     this.props.store.dispatch(counterActions.increment())

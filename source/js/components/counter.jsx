@@ -6,6 +6,7 @@ export default createClass({
     handleDecrement: PropTypes.func,
     handleIncrement: PropTypes.func
   },
+  displayName: 'Counter',
 
   render () {
     return <div>
