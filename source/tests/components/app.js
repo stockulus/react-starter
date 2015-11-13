@@ -10,8 +10,8 @@ import App from '../../js/components/app'
 setupDOM()
 
 test('click "The Buttons"', (assert) => {
-  const app = <App store={createStore(reducers)} />
-  const output = ReactTestUtils.renderIntoDocument(app)
+  const output = ReactTestUtils.renderIntoDocument(
+    <App store={createStore(reducers)} />)
 
   const buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(
     output, 'button')
