@@ -7,23 +7,25 @@ import setupDOM from '../setup_dom'
 import reducers from '../../js/reducers'
 import App from '../../js/components/app'
 
-setupDOM()
-
 test('click "The Buttons"', (assert) => {
-  const output = ReactTestUtils.renderIntoDocument(
-    <App store={createStore(reducers)} />)
+  setupDOM((error) => {
+    if (error) return assert.error(error)
 
-  const buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(
-    output, 'button')
+    const output = ReactTestUtils.renderIntoDocument(
+      <App store={createStore(reducers)} />)
 
-  assert.equal(buttons.length, 2, '2 buttons')
+    const buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(
+      output, 'button')
 
-  ReactTestUtils.Simulate.click(buttons[1])
-  ReactTestUtils.Simulate.click(buttons[1])
+    assert.equal(buttons.length, 2, '2 buttons')
 
-  assert.equal(output.state.counter, 2, 'has 2 click (1+1)')
+    ReactTestUtils.Simulate.click(buttons[1])
+    ReactTestUtils.Simulate.click(buttons[1])
 
-  ReactTestUtils.Simulate.click(buttons[0])
-  assert.equal(output.state.counter, 1, 'has 1 click (1+1-1)')
-  assert.end()
+    assert.equal(output.state.counter, 2, 'has 2 click (1+1)')
+
+    ReactTestUtils.Simulate.click(buttons[0])
+    assert.equal(output.state.counter, 1, 'has 1 click (1+1-1)')
+    assert.end()
+  })
 })

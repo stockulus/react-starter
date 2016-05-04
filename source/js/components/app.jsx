@@ -29,11 +29,12 @@ export default createClass({
   getInitialState () {
     return this.props.store.getState()
   },
-
   render () {
-    return <Counter
-              count={this.state.counter}
-              handleDecrement={this._handleDecrementClick}
-              handleIncrement={this._handleIncrementClick} />
+    return (
+      <Counter
+        count={this.state.counter}
+        handleDecrement={this._handleDecrementClick}
+        handleIncrement={this._handleIncrementClick} />
+    )
   }
 })

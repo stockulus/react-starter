@@ -9,10 +9,12 @@ export default createClass({
   displayName: 'Counter',
 
   render () {
-    return <div>
-             <span>Counter: {this.props.count} </span>
-             <button onClick={this.props.handleDecrement}>-</button>
-             <button onClick={this.props.handleIncrement}>+</button>
-           </div>
+    return (
+      <div>
+        <span>Counter: {this.props.count} </span>
+        <button onClick={this.props.handleDecrement}>-</button>
+        <button onClick={this.props.handleIncrement}>+</button>
+      </div>
+    )
   }
 })

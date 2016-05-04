@@ -9,4 +9,4 @@ import reducers from './reducers'
 
 let store = createStore(reducers)
 
-render(<App store={store}/>, document.getElementById('content'))
+render(<App store={store} />, document.getElementById('content'))
