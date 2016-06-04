@@ -33,7 +33,7 @@
     "lodash.assign": "4.0.9",
     "nodemon": "1.9.2",
     "run-sequence": "1.2.1",
-    "standard": "7.1.1",
+    "standard": "7.1.2",
     "tape": "4.5.1",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
